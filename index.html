@@ -52,18 +52,18 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
 :root{
   --white:#faf9f7;--cream:#f2ede6;--sage:#8a9e8c;--sage-dk:#4a6b4d;--sage-md:#698c6b;
   --sage-lt:#c5d4c6;--stone:#8a8078;--stone-lt:#e4ddd5;--char:#252523;
   --lake:#6a94a0;--lake-lt:#b2cdd5;--gold:#a8956e;--mist:#d4dfd5;
-  --fd:'Cormorant Garamond',Georgia,serif;--fb:'Jost',sans-serif;
+  --fd:'Cormorant Garamond',Georgia,serif;--fb:'Inter',system-ui,sans-serif;
   --nh:72px;--mw:1100px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--white);color:var(--char);font-family:var(--fb);font-weight:300;line-height:1.7;overflow-x:hidden}
+body{background:var(--white);color:var(--char);font-family:var(--fb);font-weight:400;font-size:16px;line-height:1.75;overflow-x:hidden}
 img{max-width:100%;display:block;object-fit:cover}
 a{color:inherit;text-decoration:none}
 button{cursor:pointer;border:none;background:none;font-family:inherit}
@@ -74,30 +74,30 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nh);background:rgba(250,249,247,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--stone-lt);display:flex;align-items:center;justify-content:space-between;padding:0 2rem}
 .logo{font-family:var(--fd);font-size:1.22rem;font-weight:400;color:var(--sage-dk);line-height:1.2;cursor:pointer}
-.logo small{display:block;font-family:var(--fb);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:300}
+.logo small{display:block;font-family:var(--fb);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);font-weight:400}
 .nav-links{display:flex;gap:.1rem}
-.nav-links a{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400;color:var(--char);padding:.5rem .8rem;border-radius:2px;transition:.22s}
+.nav-links a{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--char);padding:.5rem .8rem;border-radius:2px;transition:.22s}
 .nav-links a:hover,.nav-links a.active{color:var(--sage-dk);background:var(--sage-lt)}
 .nav-ctas{display:flex;gap:.75rem}
-.btn{display:inline-block;font-family:var(--fb);font-weight:400;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.4rem;border-radius:2px;transition:.22s;white-space:nowrap;cursor:pointer}
+.btn{display:inline-block;font-family:var(--fb);font-weight:500;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:.6rem 1.4rem;border-radius:2px;transition:.22s;white-space:nowrap;cursor:pointer}
 .btn-p{background:var(--sage-dk);color:var(--white)}
 .btn-p:hover{background:var(--char)}
 .btn-o{border:1px solid var(--gold);color:var(--gold)}
 .btn-o:hover{background:var(--gold);color:var(--white)}
-.btn-g{border:1px solid rgba(255,255,255,.35);color:white}
+.btn-g{border:1px solid rgba(255,255,255,.45);color:white}
 .btn-g:hover{background:rgba(255,255,255,.15)}
-.btn-lg{font-size:.77rem;padding:.88rem 2.1rem}
+.btn-lg{font-size:.8rem;padding:.9rem 2.2rem}
 .ham{display:none;flex-direction:column;gap:5px;padding:8px}
 .ham span{display:block;width:22px;height:1.5px;background:var(--char);transition:.3s}
 .mob{display:none;position:fixed;top:var(--nh);left:0;right:0;z-index:199;background:var(--white);border-bottom:1px solid var(--stone-lt);padding:1.5rem 2rem 2rem;flex-direction:column;gap:.4rem;box-shadow:0 8px 32px rgba(0,0,0,.08)}
 .mob.open{display:flex}
-.mob a{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding:.65rem 0;border-bottom:1px solid var(--stone-lt)}
+.mob a{font-size:.88rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500;padding:.7rem 0;border-bottom:1px solid var(--stone-lt)}
 .mob .btn-p{margin-top:.75rem;text-align:center;display:block}
 
 /* LAYOUT */
 .c{max-width:var(--mw);margin:0 auto;padding:0 2rem}
 .sec{padding:5.5rem 0}
-.lbl{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);font-weight:400;margin-bottom:.85rem;display:block}
+.lbl{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:.85rem;display:block}
 .h1,.h2{font-family:var(--fd);font-weight:300;line-height:1.12;color:var(--char)}
 .h1{font-size:clamp(2.4rem,5vw,4rem)}
 .h2{font-size:clamp(1.8rem,3.5vw,2.9rem)}
@@ -105,7 +105,7 @@ em{font-style:italic;color:var(--sage-dk)}
 .rule{width:36px;height:1px;background:var(--sage);margin:1.3rem 0}
 .rc{margin:1.3rem auto}
 .tc{text-align:center}
-.body-s{font-size:.87rem;color:var(--stone);line-height:1.85}
+.body-s{font-size:.93rem;color:#5a5550;line-height:1.85;font-weight:400}
 
 /* ── HOME ── */
 .hero{display:grid;grid-template-columns:55% 45%;min-height:calc(100vh - var(--nh));overflow:hidden}
@@ -142,7 +142,7 @@ em{font-style:italic;color:var(--sage-dk)}
 .svc-c:hover::after{transform:scaleX(1)}
 .svc-c img{width:100%;height:155px;object-fit:cover;margin-bottom:1.4rem;filter:saturate(.95)brightness(.95)}
 .svc-c h3{font-family:var(--fd);font-size:1.4rem;font-weight:400;margin-bottom:.6rem}
-.svc-c p{font-size:.83rem;color:var(--stone);line-height:1.7}
+.svc-c p{font-size:.9rem;color:#5a5550;line-height:1.75}
 .svc-lnk{display:inline-block;margin-top:1rem;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-dk);font-weight:400;border-bottom:1px solid var(--sage-lt);transition:border-color .2s}
 .svc-c:hover .svc-lnk{border-color:var(--sage-dk)}
 
@@ -157,7 +157,7 @@ em{font-style:italic;color:var(--sage-dk)}
 .rev-c{background:var(--white);padding:2rem;border:1px solid var(--stone-lt);position:relative}
 .rev-c::before{content:'\201C';font-family:var(--fd);font-size:4rem;color:var(--sage-lt);line-height:1;position:absolute;top:.5rem;left:1.2rem}
 .rev-stars{color:var(--gold);font-size:.77rem;margin-top:1.6rem}
-.rev-text{font-family:var(--fd);font-style:italic;font-size:1.04rem;line-height:1.6;color:var(--char);margin-top:.4rem}
+.rev-text{font-family:var(--fd);font-style:italic;font-size:1.08rem;line-height:1.65;color:var(--char);margin-top:.4rem}
 .rev-by{margin-top:.8rem;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}
 
 .ins-sec{border-top:1px solid var(--stone-lt)}
@@ -181,7 +181,7 @@ em{font-style:italic;color:var(--sage-dk)}
 .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.75rem;margin-top:3rem}
 .faq-i{background:var(--white);border:1px solid var(--stone-lt);padding:2rem}
 .faq-i h3{font-family:var(--fd);font-size:1.12rem;font-weight:400;margin-bottom:.6rem;color:var(--char)}
-.faq-i p{font-size:.83rem;color:var(--stone);line-height:1.75}
+.faq-i p{font-size:.9rem;color:#5a5550;line-height:1.78}
 .faq-i a{color:var(--sage-dk)}
 
 /* ── SERVICES ── */
@@ -194,7 +194,7 @@ em{font-style:italic;color:var(--sage-dk)}
 .svc-blk-l .num{font-family:var(--fd);font-size:4rem;font-weight:300;color:var(--stone-lt);line-height:1;margin-bottom:.4rem}
 .svc-blk-l h2{font-family:var(--fd);font-size:1.85rem;font-weight:300;line-height:1.2;margin-bottom:.7rem}
 .svc-blk-photo{width:100%;height:185px;object-fit:cover;margin-top:1.2rem;filter:saturate(.95)}
-.svc-blk-c p{font-size:.87rem;color:var(--stone);line-height:1.85;margin-bottom:.85rem}
+.svc-blk-c p{font-size:.93rem;color:#5a5550;line-height:1.85;margin-bottom:.85rem}
 .tags{display:flex;flex-wrap:wrap;gap:.48rem;margin:1.4rem 0}
 .tag{background:var(--cream);border:1px solid var(--stone-lt);padding:.3rem .82rem;font-size:.69rem;letter-spacing:.04em;color:var(--char);border-radius:20px}
 .note-s{font-size:.77rem;color:var(--stone);line-height:1.6;margin-top:.7rem}
@@ -213,7 +213,7 @@ em{font-style:italic;color:var(--sage-dk)}
 .sp-c h3{font-family:var(--fd);font-size:1.85rem;font-weight:300;margin-bottom:.5rem}
 .sp-price{font-size:1.05rem;color:var(--sage-dk);font-weight:400;letter-spacing:.04em;margin-bottom:.85rem}
 .sp-feat .sp-price{color:var(--sage-lt)}
-.sp-desc{font-size:.85rem;color:var(--stone);line-height:1.75}
+.sp-desc{font-size:.9rem;color:#5a5550;line-height:1.78}
 .sp-feat .sp-desc{color:rgba(250,249,247,.7)}
 .sp-exp{margin-top:1.4rem;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);border-top:1px solid var(--stone-lt);padding-top:.9rem}
 .sp-feat .sp-exp{border-top-color:rgba(255,255,255,.12);color:rgba(250,249,247,.42)}
@@ -317,12 +317,20 @@ footer{background:var(--char);color:rgba(250,249,247,.62);padding:3.5rem 0 2rem}
 }
 @media(max-width:600px){
   .svc-grid,.staff-grid,.foot-grid{grid-template-columns:1fr}
-  .trust-i{gap:1.1rem;font-size:.62rem}
+  .trust-i{gap:1.1rem;font-size:.7rem}
   .hero-ctas{flex-direction:column;align-items:flex-start}
   .gstrip-i{flex-direction:column}
   .stats-row{grid-template-columns:1fr}
   .strip{height:auto}
   .strip-i{height:175px}
+  /* Mobile font boosts */
+  body{font-size:15px}
+  .hero-sub,.body-s,.svc-c p,.rev-text,.faq-i p,.sp-desc,.note-s,.ins-note,.ci p,.ci a{font-size:.95rem;line-height:1.8}
+  .svc-c h3{font-size:1.3rem}
+  .rev-c{padding:1.5rem}
+  .faq-i{padding:1.5rem}
+  .mob a{font-size:.9rem;letter-spacing:.04em}
+  .btn-lg{width:100%;text-align:center;padding:.85rem 1.5rem}
 }
 </style>
 </head>
@@ -397,9 +405,9 @@ footer{background:var(--char);color:rgba(250,249,247,.62);padding:3.5rem 0 2rem}
 
   <div class="strip" aria-label="Spa services gallery">
     <div class="strip-i">
-      <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&auto=format&fit=crop&q=75"
-        alt="Hot stone massage therapy Bellevue WA" width="400" height="270" loading="lazy">
-      <div class="strip-lbl">Hot Stone Massage</div>
+      <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&auto=format&fit=crop&q=75"
+        alt="Relaxing massage therapy treatment Bellevue WA" width="400" height="270" loading="lazy">
+      <div class="strip-lbl">Massage Therapy</div>
     </div>
     <div class="strip-i">
       <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&auto=format&fit=crop&q=75"
@@ -412,9 +420,9 @@ footer{background:var(--char);color:rgba(250,249,247,.62);padding:3.5rem 0 2rem}
       <div class="strip-lbl">Deep Tissue Massage</div>
     </div>
     <div class="strip-i">
-      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=75"
-        alt="Relaxing lakeside spa Bellevue WA" width="400" height="270" loading="lazy">
-      <div class="strip-lbl">Lakeside Relaxation</div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Bellevue%2C_WA_-_Lake_Bellevue_01.jpg/1280px-Bellevue%2C_WA_-_Lake_Bellevue_01.jpg"
+        alt="Lake Bellevue Bellevue Washington — view from All Star Massage and Spa" width="400" height="270" loading="lazy">
+      <div class="strip-lbl">Lake Bellevue View</div>
     </div>
   </div>
 
@@ -433,7 +441,7 @@ footer{background:var(--char);color:rgba(250,249,247,.62);padding:3.5rem 0 2rem}
         <span class="svc-lnk">Learn more →</span>
       </article>
       <article class="svc-c" role="listitem" onclick="go('services')" tabindex="0">
-        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&auto=format&fit=crop&q=75" alt="Hot stone wellness massage Bellevue WA spa" width="600" height="155" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&auto=format&fit=crop&q=75" alt="Wellness massage Bellevue WA spa" width="600" height="155" loading="lazy">
         <h3>Wellness &amp; Spa Massage</h3>
         <p>Hot stone, deep tissue, Swedish, sports, prenatal — our most popular treatments melt stress and renew your body, mind, and spirit.</p>
         <span class="svc-lnk">Learn more →</span>
@@ -445,7 +453,7 @@ footer{background:var(--char);color:rgba(250,249,247,.62);padding:3.5rem 0 2rem}
         <span class="svc-lnk">Learn more →</span>
       </article>
       <article class="svc-c" role="listitem" onclick="go('services')" tabindex="0">
-        <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=600&auto=format&fit=crop&q=75" alt="Body wrap treatment Bellevue WA day spa" width="600" height="155" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&auto=format&fit=crop&q=75" alt="Natural body treatment spa Bellevue WA Pacific Northwest" width="600" height="155" loading="lazy">
         <h3>Body Treatments</h3>
         <p>Restorative body wraps, mud treatments, and exfoliating scrubs using M'Lis products. Head-to-toe detox and nourishment.</p>
         <span class="svc-lnk">Learn more →</span>
@@ -541,6 +549,10 @@ footer{background:var(--char);color:rgba(250,249,247,.62);padding:3.5rem 0 2rem}
         <a href="#" onclick="go('contact')" class="btn btn-g">Get Directions →</a>
       </div>
       <div class="lake-deets">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Bellevue%2C_WA_-_Lake_Bellevue_01.jpg/1280px-Bellevue%2C_WA_-_Lake_Bellevue_01.jpg"
+          alt="Lake Bellevue Bellevue Washington — the lake our spa overlooks" width="600" height="220"
+          style="width:100%;height:200px;object-fit:cover;object-position:center 60%;margin-bottom:1.5rem;filter:brightness(.95) saturate(1.1)"
+          loading="lazy">
         <div class="ld-i"><div class="ld-ic">📍</div><div><strong>Address</strong><p>9 Lake Bellevue Drive, Suite 112<br>Bellevue, WA 98005</p></div></div>
         <div class="ld-i"><div class="ld-ic">🕐</div><div><strong>Hours</strong><p>Monday – Saturday: 9:00 am – 9:00 pm<br>Sunday: Closed</p></div></div>
         <div class="ld-i"><div class="ld-ic">📞</div><div><strong>Phone</strong><p><a href="tel:4254521772" style="color:var(--sage-lt)">425.452.1772</a></p></div></div>
@@ -604,7 +616,7 @@ footer{background:var(--char);color:rgba(250,249,247,.62);padding:3.5rem 0 2rem}
         <h2><em>Wellness</em><br>&amp; Spa Massage</h2>
         <div class="rule"></div>
         <a href="https://www.secure-booker.com/allstarmassage/MakeAppointment/Search.aspx" target="_blank" class="btn btn-p">Book Now</a>
-        <img class="svc-blk-photo" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&auto=format&fit=crop&q=75" alt="Hot stone massage Bellevue WA lakeside spa" width="500" height="185" loading="lazy">
+        <img class="svc-blk-photo" src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=500&auto=format&fit=crop&q=75" alt="Wellness spa massage Bellevue WA lakeside" width="500" height="185" loading="lazy">
       </div>
       <div class="svc-blk-c">
         <p>Our wellness massage menu is designed to melt stress and renew your body, mind, and soul. Our most popular treatments — <strong>hot stone</strong> and <strong>deep tissue</strong> — draw guests back again and again. Every session is fully customized; our therapists listen and adapt in real time.</p>
@@ -631,7 +643,7 @@ footer{background:var(--char);color:rgba(250,249,247,.62);padding:3.5rem 0 2rem}
         <h2><em>Body</em><br>Treatments</h2>
         <div class="rule"></div>
         <a href="https://www.secure-booker.com/allstarmassage/MakeAppointment/Search.aspx" target="_blank" class="btn btn-p">Book Now</a>
-        <img class="svc-blk-photo" src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=500&auto=format&fit=crop&q=75" alt="Body treatment mud wrap Bellevue day spa" width="500" height="185" loading="lazy">
+        <img class="svc-blk-photo" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&auto=format&fit=crop&q=75" alt="Natural body treatment spa Bellevue WA Pacific Northwest" width="500" height="185" loading="lazy">
       </div>
       <div class="svc-blk-c">
         <p>Restorative body treatments that nourish skin deeply, detoxify, and deliver total-body relaxation from head to toe. These immersive experiences complement massage beautifully.</p>
