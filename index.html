@@ -201,24 +201,26 @@ em{font-style:italic;color:var(--sage-dk)}
 .note-s a{color:var(--sage-dk)}
 
 /* ── SPECIALS ── */
-.sp-banner{background:linear-gradient(135deg,var(--sage-dk) 0%,#2e4a30 100%);color:var(--white);padding:4rem 0}
-.sp-banner h1{font-family:var(--fd);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;color:white;margin-bottom:.7rem}
-.sp-banner p{opacity:.82;font-size:.87rem;max-width:500px}
-.sp-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:4rem 0}
-.sp-c{border:1px solid var(--stone-lt);padding:2.5rem;background:var(--white);position:relative;transition:box-shadow .22s}
+.sp-banner-wrap{position:relative;height:320px;overflow:hidden;background:var(--sage-dk)}
+.sp-banner-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:brightness(.55) saturate(.9)}
+.sp-banner-txt{position:absolute;inset:0;display:flex;align-items:flex-end;padding:3rem calc((100vw - var(--mw))/2 + 2rem)}
+.sp-banner-txt h1{font-family:var(--fd);font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.1}
+.sp-banner-txt .lbl{color:var(--sage-lt)}
+.sp-note{font-size:.78rem;color:var(--stone);margin-top:.5rem;letter-spacing:.02em}
+.sp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;padding:3.5rem 0 1rem}
+.sp-c{border:1px solid var(--stone-lt);padding:2.2rem 2.5rem;background:var(--white);position:relative;transition:box-shadow .22s}
 .sp-c:hover{box-shadow:0 6px 26px rgba(0,0,0,.07)}
-.sp-feat{background:var(--char);color:var(--white);grid-column:1 / -1}
-.sp-mo{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);margin-bottom:.7rem}
+.sp-feat{background:var(--char);color:var(--white);grid-column:1 / -1;border-color:transparent;padding:3rem}
+.sp-mo{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin-bottom:.85rem;display:block}
 .sp-feat .sp-mo{color:var(--sage-lt)}
-.sp-c h3{font-family:var(--fd);font-size:1.85rem;font-weight:300;margin-bottom:.5rem}
-.sp-price{font-size:1.05rem;color:var(--sage-dk);font-weight:400;letter-spacing:.04em;margin-bottom:.85rem}
-.sp-feat .sp-price{color:var(--sage-lt)}
+.sp-c h3{font-family:var(--fd);font-size:2rem;font-weight:300;margin-bottom:.4rem}
+.sp-price{font-size:1.1rem;color:var(--sage-dk);font-weight:500;letter-spacing:.04em;margin-bottom:1rem;display:block}
+.sp-feat .sp-price{color:var(--sage-lt);font-size:1.4rem}
 .sp-desc{font-size:.9rem;color:#5a5550;line-height:1.78}
-.sp-feat .sp-desc{color:rgba(250,249,247,.7)}
-.sp-exp{margin-top:1.4rem;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);border-top:1px solid var(--stone-lt);padding-top:.9rem}
-.sp-feat .sp-exp{border-top-color:rgba(255,255,255,.12);color:rgba(250,249,247,.42)}
-.edit-note{background:#fffbe6;border:1px dashed #c49a22;border-radius:3px;padding:1rem 1.5rem;font-size:.79rem;color:#6b4e00;margin-bottom:2rem;line-height:1.65}
-.edit-note strong{display:block;margin-bottom:.3rem}
+.sp-feat .sp-desc{color:rgba(250,249,247,.75);font-size:.95rem;max-width:680px}
+.sp-exp{margin-top:1.4rem;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);border-top:1px solid var(--stone-lt);padding-top:.9rem}
+.sp-feat .sp-exp{border-top-color:rgba(255,255,255,.12);color:rgba(250,249,247,.38)}
+.sp-divider{height:1px;background:var(--stone-lt);margin:2.5rem 0 3rem}
 
 /* ── GIFT ── */
 .gift-banner{height:250px;position:relative;overflow:hidden}
@@ -308,6 +310,7 @@ footer{background:var(--char);color:rgba(250,249,247,.62);padding:3.5rem 0 2rem}
   .svc-blk{grid-template-columns:1fr;gap:1.5rem}
   .sp-grid{grid-template-columns:1fr}
   .sp-feat{grid-column:auto}
+  .sp-banner-txt{padding:2rem}
   .gift-body{grid-template-columns:1fr;gap:3rem}
   .about-story{grid-template-columns:1fr;gap:3rem}
   .staff-grid{grid-template-columns:1fr 1fr}
@@ -694,50 +697,55 @@ footer{background:var(--char);color:rgba(250,249,247,.62);padding:3.5rem 0 2rem}
 
 <!-- ═══════════════ SPECIALS ═══════════════ -->
 <main class="page" id="page-specials">
-  <div class="sp-banner"><div class="c">
-    <span class="lbl" style="color:var(--sage-lt)">Monthly Offers · Bellevue, WA</span>
-    <h1 class="sp-banner" style="font-family:var(--fd);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;color:white;margin-bottom:.7rem">This month's<br><em style="color:var(--sage-lt)">specials</em></h1>
-    <p style="opacity:.82;font-size:.87rem;max-width:500px;color:white">Specials may not be combined with Spa Finder, Spa Week, or other discounts. Call to reserve: 425.452.1772</p>
-  </div></div>
-  <div class="c" style="padding-top:3rem">
+  <div class="sp-banner-wrap">
+    <img src="photos/photo-svc-specials.jpg" alt="All Star Massage and Spa waiting room Bellevue WA" loading="lazy">
+    <div class="sp-banner-txt">
+      <div>
+        <span class="lbl" style="color:var(--sage-lt)">Monthly Offers · Bellevue, WA</span>
+        <h1>This month's<br><em style="color:var(--sage-lt)">specials</em></h1>
+      </div>
+    </div>
+  </div>
+  <div class="c">
 
     <!-- ═══ EDITABLE SPECIALS — UPDATE MONTHLY ═══ -->
     <div class="sp-grid">
       <div class="sp-c sp-feat">
-        <p class="sp-mo">Featured Special · Current</p>
+        <span class="sp-mo">Featured Special · Current</span>
         <h3>Take a Spa Day</h3>
-        <p class="sp-price">$99</p>
+        <span class="sp-price">$99</span>
         <p class="sp-desc">Treat yourself or a loved one to a complete spa experience — scented foot soak, paraffin dip for feet, classic facial, aromatic scalp massage, plus a beverage and snack. Pure restoration, head to toe.</p>
         <p class="sp-exp">*Not valid with Spa Finder, Spa Week, or any other discount. Call to reserve: 425.452.1772</p>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.75rem">
           <a href="https://www.secure-booker.com/allstarmassage/MakeAppointment/Search.aspx" target="_blank" class="btn btn-g">Book This Special →</a>
           <a href="https://allstarlakespa.boomtime.com/lgift" target="_blank" class="btn btn-g">Give as a Gift →</a>
         </div>
       </div>
       <div class="sp-c">
-        <p class="sp-mo">Ongoing</p>
+        <span class="sp-mo">Ongoing</span>
         <h3>Medical Massage</h3>
-        <p class="sp-price">Insurance Accepted</p>
-        <p class="sp-desc">Your massage may already be covered. We bill Regence, Premera, Blue Cross Blue Shield, Aetna, United Healthcare, Kaiser Permanente, and First Choice. Call us to verify your benefits — it takes two minutes.</p>
+        <span class="sp-price">Insurance Accepted</span>
+        <p class="sp-desc">Your massage may already be covered. We bill Regence, Premera, Blue Cross Blue Shield, Aetna, United Healthcare, Kaiser Permanente, and First Choice. Call us to verify — it takes two minutes.</p>
         <p class="sp-exp">Call: 425.452.1772 · Mon–Sat 9am–9pm</p>
       </div>
       <div class="sp-c">
-        <p class="sp-mo">Ongoing</p>
-        <h3>Instant Gift Certificates</h3>
-        <p class="sp-price">Any Amount</p>
+        <span class="sp-mo">Ongoing</span>
+        <h3>Gift Certificates</h3>
+        <span class="sp-price">Any Amount</span>
         <p class="sp-desc">The perfect gift for birthdays, anniversaries, or thank-yous. Instant digital delivery by email. Redeemable for any service at our lakeside spa in Bellevue, WA.</p>
         <p class="sp-exp">Purchase online 24/7 — delivered immediately by email</p>
       </div>
     </div>
     <!-- ═══ END EDITABLE SPECIALS ═══ -->
 
-    <div style="text-align:center;padding:3rem 0;border-top:1px solid var(--stone-lt)">
-      <p class="body-s" style="margin-bottom:1.5rem">Mention the special when you call or book online.</p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+    <div class="sp-divider"></div>
+    <div style="text-align:center;padding-bottom:4rem">
+      <p class="lbl">Ready to book?</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem">
         <a href="https://www.secure-booker.com/allstarmassage/MakeAppointment/Search.aspx" target="_blank" class="btn btn-p btn-lg">Book an Appointment →</a>
         <a href="https://allstarlakespa.boomtime.com/lgift" target="_blank" class="btn btn-o btn-lg">Buy a Gift Certificate →</a>
       </div>
-      <p class="body-s" style="margin-top:1.2rem">Or call: <a href="tel:4254521772" style="color:var(--sage-dk)">425.452.1772</a> · Mon–Sat 9am–9pm</p>
+      <p class="body-s" style="margin-top:1.2rem;color:var(--stone)">Or call: <a href="tel:4254521772" style="color:var(--sage-dk)">425.452.1772</a> · Mon–Sat 9am–9pm</p>
     </div>
   </div>
 </main>
